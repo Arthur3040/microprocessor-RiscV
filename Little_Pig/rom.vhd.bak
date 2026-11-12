@@ -1,0 +1,64 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity rom is
+    port(
+        clk      : in  std_logic;
+        rom_en   : in  std_logic;
+        endereco : in  unsigned(15 downto 0);
+        dado_out : out unsigned(15 downto 0)
+    );
+end entity;
+
+architecture a_rom of rom is
+
+    type mem_array is array (0 to 127) of unsigned(15 downto 0);
+
+    -- =========================================================================
+    -- CODIFICACAO DAS INSTRUCOES (16 bits) - 2 Operandos Ortogonais:
+    -- NOP  : 0000_000_000_000000
+    -- LD   : 0001_ddd_0_cccccccc  (Rd <= cccccccc)
+    -- ADD  : 0010_ddd_sss_000000  (Rd <= Rd + Rs)
+    -- ADDI : 0011_ddd_0_cccccccc  (Rd <= Rd + cccccccc)
+    -- SUB  : 0100_ddd_sss_000000  (Rd <= Rd - Rs)
+    -- MOV  : 0101_ddd_sss_000000  (Rd <= Rs)
+    -- JMP  : 0110_000_0_eeeeeeee  (PC <= eeeeeeee)
+    -- =========================================================================
+    -- PROGRAMA EM ASSEMBLY:
+    -- 0  (A): LD   R3, 5      ; Carrega R3 com 5
+    -- 1  (B): LD   R4, 8      ; Carrega R4 com 8
+    -- 2  (C): MOV  R5, R3     ; Passo C (parte 1): R5 <= R3
+    -- 3  (C): ADD  R5, R4     ; Passo C (parte 2): R5 <= R5 + R4
+    -- 4  (D): ADDI R5, -1     ; Subtrai 1 de R5 (soma -1 em complemento de 2)
+    -- 5  (E): JMP  20         ; Salta incondicionalmente para o endereco 20
+    -- 6  (F): LD   R5, 0      ; Zera R5 (nunca sera executada)
+    -- 20 (G): MOV  R3, R5     ; No endereco 20, copia R5 para R3
+    -- 21 (H): JMP  2          ; Salta para o passo C (endereco 2)
+    -- 22 (I): LD   R3, 0      ; Zera R3 (nunca sera executada)
+    -- =========================================================================
+
+    constant memoria : mem_array := (
+        0  => B"0001_011_0_00000101", -- LD   R3, 5
+        1  => B"0001_100_0_00001000", -- LD   R4, 8
+        2  => B"0101_101_011_000000", -- MOV  R5, R3
+        3  => B"0010_101_100_000000", -- ADD  R5, R4
+        4  => B"0011_101_0_11111111", -- ADDI R5, -1
+        5  => B"0110_000_0_00010100", -- JMP  20
+        6  => B"0001_101_0_00000000", -- LD   R5, 0 (nunca executada)
+        20 => B"0101_011_101_000000", -- MOV  R3, R5
+        21 => B"0110_000_0_00000010", -- JMP  2
+        22 => B"0001_011_0_00000000", -- LD   R3, 0 (nunca executada)
+        others => x"0000"             -- NOP (0x0000)
+    );
+
+begin
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if rom_en = '1' then
+                dado_out <= memoria(to_integer(endereco(6 downto 0)));
+            end if;
+        end if;
+    end process;
+end architecture;

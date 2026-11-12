@@ -1,0 +1,461 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/18.1/Little_Pig/simulation/modelsim
+Ebanco_registradores
+Z1 w1793229663
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd
+Z6 FC:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd
+l0
+L5
+V9zBINBe24mQH;9CAKg54U0
+!s100 <C@^4]]UX1FcgnBM>`O;23
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1794430565
+!i10b 1
+Z9 !s108 1794430565.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd|
+Z11 !s107 C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abr
+R2
+R3
+R4
+DEx4 work 19 banco_registradores 0 22 9zBINBe24mQH;9CAKg54U0
+l40
+L25
+V>CC7Jh@R2_YaQYg4h]NCC2
+!s100 g5kQj2A[C0TcI9;O^N2kQ2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eextensor_sinal
+R1
+R2
+R3
+R4
+R0
+Z14 8C:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd
+Z15 FC:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd
+l0
+L5
+V>;7fWl?I1RVFlId;zH0FV3
+!s100 o_jk7Jf89_40L<YXWmM7B2
+R7
+31
+R8
+!i10b 1
+R9
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd|
+Z17 !s107 C:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd|
+!i113 1
+R12
+R13
+Aa_extensor_sinal
+R2
+R3
+R4
+DEx4 work 14 extensor_sinal 0 22 >;7fWl?I1RVFlId;zH0FV3
+l13
+L12
+V2h^XL8`_hlU[im:7[ljJW0
+!s100 54C?03F40NcSez8l4DCD42
+R7
+31
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 1
+R12
+R13
+Emaq_estados
+R1
+R2
+R3
+R4
+R0
+Z18 8C:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd
+Z19 FC:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd
+l0
+L5
+VoB29JliVSdQHWGLJDh0O00
+!s100 0F6mj8:Bn0I42]0h21Vci0
+R7
+31
+R8
+!i10b 1
+Z20 !s108 1794430564.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd|
+Z22 !s107 C:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd|
+!i113 1
+R12
+R13
+Aa_maq_estados
+R2
+R3
+R4
+DEx4 work 11 maq_estados 0 22 oB29JliVSdQHWGLJDh0O00
+l14
+L12
+VECRhEhk>6fbXTihgWNPY_3
+!s100 Q@T2NLcL]<J5jYYiJkz>22
+R7
+31
+R8
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R12
+R13
+Emux_2x1
+R1
+R2
+R3
+R4
+R0
+Z23 8C:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd
+Z24 FC:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd
+l0
+L5
+V?Rd3c:;9a;[=394Nb0A0o1
+!s100 iE>9Xhz1M5L2JSZzPeA`;1
+R7
+31
+Z25 !s110 1794430564
+!i10b 1
+R20
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd|
+Z27 !s107 C:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd|
+!i113 1
+R12
+R13
+Aa_mux2_x1
+R2
+R3
+R4
+DEx4 work 7 mux_2x1 0 22 ?Rd3c:;9a;[=394Nb0A0o1
+l15
+L14
+V3^cB9FlgS4=98?:VY;@?;1
+!s100 OWA5I8;MiY5d9_9KU<?kf0
+R7
+31
+R25
+!i10b 1
+R20
+R26
+R27
+!i113 1
+R12
+R13
+Epc
+R1
+R2
+R3
+R4
+R0
+Z28 8C:/intelFPGA_lite/18.1/Little_Pig/pc.vhd
+Z29 FC:/intelFPGA_lite/18.1/Little_Pig/pc.vhd
+l0
+L5
+VzmE=0zGOoVXfSL0W?P0^G1
+!s100 1hG0VQ^4AoJKe3Dl7<J7W1
+R7
+31
+R25
+!i10b 1
+R20
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/pc.vhd|
+Z31 !s107 C:/intelFPGA_lite/18.1/Little_Pig/pc.vhd|
+!i113 1
+R12
+R13
+Aa_pc
+R2
+R3
+R4
+DEx4 work 2 pc 0 22 zmE=0zGOoVXfSL0W?P0^G1
+l21
+L18
+V?IXa:d=oDo;l5PTL>iHNR1
+!s100 l9k8nfHdJV8;18CD_V]k30
+R7
+31
+R25
+!i10b 1
+R20
+R30
+R31
+!i113 1
+R12
+R13
+Eprocessador
+R1
+R2
+R3
+R4
+R0
+Z32 8C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd
+Z33 FC:/intelFPGA_lite/18.1/Little_Pig/processador.vhd
+l0
+L5
+VUIiGK[_?ozlIZz]1RgLm70
+!s100 kKVDXF0BXM;ihU[f_m^Y:2
+R7
+31
+R25
+!i10b 1
+R20
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd|
+Z35 !s107 C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd|
+!i113 1
+R12
+R13
+Aa_processador
+R2
+R3
+R4
+DEx4 work 11 processador 0 22 UIiGK[_?ozlIZz]1RgLm70
+l140
+L22
+VJ39kDalGTGh2bP_BGdgCL3
+!s100 EDFzTL0D3OBQge8MYz2z=2
+R7
+31
+R25
+!i10b 1
+R20
+R34
+R35
+!i113 1
+R12
+R13
+Eprocessador_tb
+Z36 w1794428314
+R2
+R3
+R4
+R0
+Z37 8C:/intelFPGA_lite/18.1/Little_Pig/processador_tb.vhd
+Z38 FC:/intelFPGA_lite/18.1/Little_Pig/processador_tb.vhd
+l0
+L5
+V<Seh;X2gzV_]D5HSP`@GC2
+!s100 R>hH8^WZl8X57[m68<zFS2
+R7
+31
+R8
+!i10b 1
+R9
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/processador_tb.vhd|
+Z40 !s107 C:/intelFPGA_lite/18.1/Little_Pig/processador_tb.vhd|
+!i113 1
+R12
+R13
+Aa_processador_tb
+R2
+R3
+R4
+DEx4 work 14 processador_tb 0 22 <Seh;X2gzV_]D5HSP`@GC2
+l45
+L8
+VcmOdm4a^06?b;V``C2]ba3
+!s100 <G?Uh?A7Fk5CB:9`7j@EL1
+R7
+31
+R8
+!i10b 1
+R9
+R39
+R40
+!i113 1
+R12
+R13
+Ereg
+R1
+R2
+R3
+R4
+R0
+Z41 8C:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd
+Z42 FC:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd
+l0
+L4
+V@lD<GM]Z24088P@=9nMKf0
+!s100 WfT[09zCLQCzI1TgKX:RD1
+R7
+31
+R25
+!i10b 1
+Z43 !s108 1794430563.000000
+Z44 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd|
+Z45 !s107 C:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd|
+!i113 1
+R12
+R13
+Areg
+R2
+R3
+R4
+DEx4 work 3 reg 0 22 @lD<GM]Z24088P@=9nMKf0
+l15
+L13
+VXMM:F_ESX=I3S_eo`0SV_1
+!s100 Umg?1_8aZ[m9i6I3]O:Q80
+R7
+31
+R25
+!i10b 1
+R43
+R44
+R45
+!i113 1
+R12
+R13
+Erom
+Z46 w1794430279
+R2
+R3
+R4
+R0
+Z47 8C:/intelFPGA_lite/18.1/Little_Pig/rom.vhd
+Z48 FC:/intelFPGA_lite/18.1/Little_Pig/rom.vhd
+l0
+L5
+VKk1kjPQ:]BRUH5]hUg2P10
+!s100 MXH9>BPOWFo8DcmA;FAf:3
+R7
+31
+Z49 !s110 1794430563
+!i10b 1
+R43
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/rom.vhd|
+Z51 !s107 C:/intelFPGA_lite/18.1/Little_Pig/rom.vhd|
+!i113 1
+R12
+R13
+Aa_rom
+R2
+R3
+R4
+DEx4 work 3 rom 0 22 Kk1kjPQ:]BRUH5]hUg2P10
+l59
+L14
+V_d@oo^l0;>z3<TfSXkPcm2
+!s100 mGgQTK[36dKeF[Chb9?4n1
+R7
+31
+R49
+!i10b 1
+R43
+R50
+R51
+!i113 1
+R12
+R13
+Eula
+R1
+R2
+R3
+R4
+R0
+Z52 8C:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd
+Z53 FC:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd
+l0
+L5
+VjGWl9g`<]Q9U:539>2S?M3
+!s100 R0HE^^O[Ma4m2I;CHQ3:=3
+R7
+31
+R49
+!i10b 1
+R43
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd|
+Z55 !s107 C:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd|
+!i113 1
+R12
+R13
+Ass
+R2
+R3
+R4
+DEx4 work 3 ula 0 22 jGWl9g`<]Q9U:539>2S?M3
+l23
+L17
+V_F6noa;]<J<`S3?T;O3Km1
+!s100 3;M1OU[SSnI8coUWbkTVJ0
+R7
+31
+R49
+!i10b 1
+R43
+R54
+R55
+!i113 1
+R12
+R13
+Eunidade_controle
+Z56 w1794430234
+R2
+R3
+R4
+R0
+Z57 8C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd
+Z58 FC:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd
+l0
+L5
+VY?RT?JSO8:E:o1L7o2?k33
+!s100 mH506a>B1]Qki<Q^lG^9O3
+R7
+31
+R49
+!i10b 1
+R43
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd|
+Z60 !s107 C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd|
+!i113 1
+R12
+R13
+Aa_unidade_controle
+R2
+R3
+R4
+DEx4 work 16 unidade_controle 0 22 Y?RT?JSO8:E:o1L7o2?k33
+l41
+L25
+V3;5iV1cnCd85>QYkCh_XH3
+!s100 Rzf4[:52bNN^0ajQXl2KB2
+R7
+31
+R49
+!i10b 1
+R43
+R59
+R60
+!i113 1
+R12
+R13

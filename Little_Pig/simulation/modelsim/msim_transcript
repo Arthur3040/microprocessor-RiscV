@@ -1,0 +1,271 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do processador_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:03 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity unidade_controle
+# -- Compiling architecture a_unidade_controle of unidade_controle
+# End time: 17:56:03 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:03 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture ss of ULA
+# End time: 17:56:03 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/rom.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:03 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/rom.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom
+# -- Compiling architecture a_rom of rom
+# End time: 17:56:03 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:03 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Reg
+# -- Compiling architecture Reg of Reg
+# End time: 17:56:04 on Nov 11,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:04 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity processador
+# -- Compiling architecture a_processador of processador
+# End time: 17:56:04 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/pc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:04 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/pc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity pc
+# -- Compiling architecture a_pc of pc
+# End time: 17:56:04 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:04 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux_2x1
+# -- Compiling architecture a_mux2_x1 of mux_2x1
+# End time: 17:56:04 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:04 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity maq_estados
+# -- Compiling architecture a_maq_estados of maq_estados
+# End time: 17:56:05 on Nov 11,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:05 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity extensor_sinal
+# -- Compiling architecture a_extensor_sinal of extensor_sinal
+# End time: 17:56:05 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:05 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity banco_registradores
+# -- Compiling architecture BR of banco_registradores
+# End time: 17:56:05 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/intelFPGA_lite/18.1/Little_Pig/processador_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:56:05 on Nov 11,2026
+# vcom -reportprogress 300 -93 -work work C:/intelFPGA_lite/18.1/Little_Pig/processador_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity processador_tb
+# -- Compiling architecture a_processador_tb of processador_tb
+# End time: 17:56:05 on Nov 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  processador_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" processador_tb 
+# Start time: 17:56:05 on Nov 11,2026
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.processador_tb(a_processador_tb)
+# Loading work.processador(a_processador)
+# Loading work.pc(a_pc)
+# Loading work.rom(a_rom)
+# Loading work.unidade_controle(a_unidade_controle)
+# Loading work.maq_estados(a_maq_estados)
+# Loading work.extensor_sinal(a_extensor_sinal)
+# Loading work.mux_2x1(a_mux2_x1)
+# Loading work.ula(ss)
+# Loading work.banco_registradores(br)
+# Loading work.reg(reg)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut/u_uc
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /processador_tb/uut
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 2  Instance: /processador_tb/uut/u_ula
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_banco_reg
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 3  Instance: /processador_tb/uut/u_ula
+# End time: 18:00:05 on Nov 11,2026, Elapsed time: 0:04:00
+# Errors: 0, Warnings: 49
