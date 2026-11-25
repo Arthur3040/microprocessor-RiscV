@@ -15,7 +15,7 @@ architecture a_rom of rom is
 
     type mem_array is array (0 to 127) of unsigned(15 downto 0);
 
--- =========================================================================
+    -- =========================================================================
     -- CODIFICACAO DAS INSTRUCOES (16 bits) - 2 Operandos Ortogonais:
     -- NOP   : 0000_000_000_000000
     -- LD    : 0001_ddd_0_cccccccc  (Rd <= cccccccc)
@@ -23,37 +23,65 @@ architecture a_rom of rom is
     -- ADDI  : 0011_ddd_0_cccccccc  (Rd <= Rd + cccccccc)
     -- SUB   : 0100_ddd_sss_000000  (Rd <= Rd - Rs)
     -- MOV   : 0101_ddd_sss_000000  (Rd <= Rs)
-    -- JMP   : 0110_000_0_eeeeeeee  (PC <= eeeeeeee)
-    -- BNE   : 0111_000_0_eeeeeeee  (Se R1 != 0, desvia para eeeeeeee)
-    -- BLO   : 1000_000_0_eeeeeeee  (Se flag_c = 1, desvia para eeeeeeee)
+    -- JMP   : 0110_000_0_eeeeeeee  (PC <= PC + 1 + offset)
+    -- BNE   : 0111_000_0_eeeeeeee  (Se flag_z = 0, PC <= eeeeeeee)
+    -- BLO   : 1000_000_0_eeeeeeee  (Se flag_c = 1, PC <= eeeeeeee)
+    -- LW    : 1001_ddd_sss_000000  (Rd <= RAM[Rs])
+    -- SW    : 1010_ddd_sss_000000  (RAM[Rs] <= Rd)
     -- =========================================================================
-    -- PROGRAMA EM ASSEMBLY:
-    -- 0  (A): LD   R1, 3      ; Contador = 3
-    -- 1  (B): LD   R2, 1      ; Passo = 1
-    -- 2  (C): SUB  R1, R2     ; (R1 <= R1 - R2) -> LOOP
-    -- 3  (D): BNE  2          ; (Se R1 != 0, volta p/ end 2)
-    -- 4  (E): LD   R3, 2      ; Carrega R3 com 2
-    -- 5  (F): LD   R4, 5      ; Carrega R4 com 5
-    -- 6  (G): SUB  R3, R4     ; (2 - 5 -> ativa flag_c = 1)
-    -- 7  (H): BLO  10         ; (Se flag_c = 1, salta p/ end 10)
-    -- 8  (I): LD   R5, 255    ; (Instrucao pulada pelo BLO)
-    -- 9  (J): JMP  0          ; (Instrucao pulada pelo BLO)
-    -- 10 (K): JMP  -2         ; (Salto relativo de -2 em complemento de 2)
+    -- PROGRAMA DE TESTE DA RAM (Dados variados, enderecos espacados, regs embaralhados):
+    -- 0  : LD  R0, 42      ; Dado 1 = 42 (0x2A)
+    -- 1  : LD  R1, 10      ; Endereco 1 = 10
+    -- 2  : SW  R0, (R1)    ; RAM[10] <= 42
+    -- 3  : LD  R2, 99      ; Dado 2 = 99 (0x63)
+    -- 4  : LD  R3, 35      ; Endereco 2 = 35
+    -- 5  : SW  R2, (R3)    ; RAM[35] <= 99
+    -- 6  : LD  R4, 17      ; Dado 3 = 17 (0x11)
+    -- 7  : LD  R5, 60      ; Endereco 3 = 60
+    -- 8  : SW  R4, (R5)    ; RAM[60] <= 17
+    -- 9  : LD  R0, 100     ; Endereco 4 = 100 (sobrescreve R0)
+    -- 10 : LD  R1, 73      ; Dado 4 = 73 (0x49) (sobrescreve R1)
+    -- 11 : SW  R1, (R0)    ; RAM[100] <= 73
+    -- 12 : LD  R2, 0       ; Zera R2 para garantir que nao sobrou lixo
+    -- 13 : LD  R4, 0       ; Zera R4 para garantir que nao sobrou lixo
+    -- 14 : LD  R3, 10      ; Novo ponteiro p/ end 10 (antes era R1)
+    -- 15 : LW  R5, (R3)    ; R5 <= RAM[10]  -> esperado: 42 (0x2A)
+    -- 16 : LD  R1, 60      ; Novo ponteiro p/ end 60 (antes era R5)
+    -- 17 : LW  R0, (R1)    ; R0 <= RAM[60]  -> esperado: 17 (0x11)
+    -- 18 : LD  R2, 35      ; Novo ponteiro p/ end 35 (antes era R3)
+    -- 19 : LW  R4, (R2)    ; R4 <= RAM[35]  -> esperado: 99 (0x63)
+    -- 20 : LD  R3, 100     ; Novo ponteiro p/ end 100 (antes era R0)
+    -- 21 : LW  R1, (R3)    ; R1 <= RAM[100] -> esperado: 73 (0x49)
+    -- 22 : ADD R5, R0      ; R5 <= 42 + 17 = 59 (0x3B)
+    -- 23 : SUB R4, R1      ; R4 <= 99 - 73 = 26 (0x1A)
     -- =========================================================================
 
     constant memoria : mem_array := (
-			0 => B"0001_001_0_00000011", -- 0: LD   R1, 3      (Contador = 3)
-			1 => B"0001_010_0_00000001", -- 1: LD   R2, 1      (Passo = 1)
-			2 => B"0100_001_010_000000", -- 2: SUB  R1, R2     (R1 <= R1 - 1) -> LOOP
-			3 => B"0111_000_0_00000010", -- 3: BNE  2          (Se R1 != 0, volta p/ end 2)
-			4 => B"0001_011_0_00000010", -- 4: LD   R3, 2
-			5 => B"0001_100_0_00000101", -- 5: LD   R4, 5
-			6 => B"0100_011_100_000000", -- 6: SUB  R3, R4     (2 - 5 -> ativa flag_c = 1)
-			7 => B"1000_000_0_00001010", -- 7: BLO  10         (Se flag_c = 1, salta p/ end 10)
-			8 => B"0001_101_0_11111111", -- 8: LD   R5, 255    (Instrução pulada pelo BLO)
-			9 => B"0110_000_0_00000000", -- 9: JMP  0          (Instrução pulada pelo BLO)
-			10=> B"0110_000_0_11111110", -- 10: JMP -2         (Salto relativo de -2 em comp2)
-			others => (others => '0')
+        0  => B"0001_000_0_00101010", -- LD  R0, 42
+        1  => B"0001_001_0_00001010", -- LD  R1, 10
+        2  => B"1010_000_001_000000", -- SW  R0, (R1)  -> RAM[10] = 42
+        3  => B"0001_010_0_01100011", -- LD  R2, 99
+        4  => B"0001_011_0_00100011", -- LD  R3, 35
+        5  => B"1010_010_011_000000", -- SW  R2, (R3)  -> RAM[35] = 99
+        6  => B"0001_100_0_00010001", -- LD  R4, 17
+        7  => B"0001_101_0_00111100", -- LD  R5, 60
+        8  => B"1010_100_101_000000", -- SW  R4, (R5)  -> RAM[60] = 17
+        9  => B"0001_000_0_01100100", -- LD  R0, 100
+        10 => B"0001_001_0_01001001", -- LD  R1, 73
+        11 => B"1010_001_000_000000", -- SW  R1, (R0)  -> RAM[100] = 73
+        12 => B"0001_010_0_00000000", -- LD  R2, 0
+        13 => B"0001_100_0_00000000", -- LD  R4, 0
+        14 => B"0001_011_0_00001010", -- LD  R3, 10
+        15 => B"1001_101_011_000000", -- LW  R5, (R3)  -> R5 = 42
+        16 => B"0001_001_0_00111100", -- LD  R1, 60
+        17 => B"1001_000_001_000000", -- LW  R0, (R1)  -> R0 = 17
+        18 => B"0001_010_0_00100011", -- LD  R2, 35
+        19 => B"1001_100_010_000000", -- LW  R4, (R2)  -> R4 = 99
+        20 => B"0001_011_0_01100100", -- LD  R3, 100
+        21 => B"1001_001_011_000000", -- LW  R1, (R3)  -> R1 = 73
+        22 => B"0010_101_000_000000", -- ADD R5, R0    -> R5 = 59
+        23 => B"0100_100_001_000000", -- SUB R4, R1    -> R4 = 26
+        others => (others => '0')     -- NOP
     );
 
 begin
