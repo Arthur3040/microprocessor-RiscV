@@ -29,61 +29,64 @@ architecture a_rom of rom is
     -- LW    : 1001_ddd_sss_000000  (Rd <= RAM[Rs])
     -- SW    : 1010_ddd_sss_000000  (RAM[Rs] <= Rd)
     -- =========================================================================
-    -- PROGRAMA DE TESTE DA RAM (Dados variados, enderecos espacados, regs embaralhados):
-    -- 0  : LD  R0, 42      ; Dado 1 = 42 (0x2A)
-    -- 1  : LD  R1, 10      ; Endereco 1 = 10
-    -- 2  : SW  R0, (R1)    ; RAM[10] <= 42
-    -- 3  : LD  R2, 99      ; Dado 2 = 99 (0x63)
-    -- 4  : LD  R3, 35      ; Endereco 2 = 35
-    -- 5  : SW  R2, (R3)    ; RAM[35] <= 99
-    -- 6  : LD  R4, 17      ; Dado 3 = 17 (0x11)
-    -- 7  : LD  R5, 60      ; Endereco 3 = 60
-    -- 8  : SW  R4, (R5)    ; RAM[60] <= 17
-    -- 9  : LD  R0, 100     ; Endereco 4 = 100 (sobrescreve R0)
-    -- 10 : LD  R1, 73      ; Dado 4 = 73 (0x49) (sobrescreve R1)
-    -- 11 : SW  R1, (R0)    ; RAM[100] <= 73
-    -- 12 : LD  R2, 0       ; Zera R2 para garantir que nao sobrou lixo
-    -- 13 : LD  R4, 0       ; Zera R4 para garantir que nao sobrou lixo
-    -- 14 : LD  R3, 10      ; Novo ponteiro p/ end 10 (antes era R1)
-    -- 15 : LW  R5, (R3)    ; R5 <= RAM[10]  -> esperado: 42 (0x2A)
-    -- 16 : LD  R1, 60      ; Novo ponteiro p/ end 60 (antes era R5)
-    -- 17 : LW  R0, (R1)    ; R0 <= RAM[60]  -> esperado: 17 (0x11)
-    -- 18 : LD  R2, 35      ; Novo ponteiro p/ end 35 (antes era R3)
-    -- 19 : LW  R4, (R2)    ; R4 <= RAM[35]  -> esperado: 99 (0x63)
-    -- 20 : LD  R3, 100     ; Novo ponteiro p/ end 100 (antes era R0)
-    -- 21 : LW  R1, (R3)    ; R1 <= RAM[100] -> esperado: 73 (0x49)
-    -- 22 : ADD R5, R0      ; R5 <= 42 + 17 = 59 (0x3B)
-    -- 23 : SUB R4, R1      ; R4 <= 99 - 73 = 26 (0x1A)
-    -- =========================================================================
 
-    constant memoria : mem_array := (
-        0  => B"0001_000_0_00101010", -- LD  R0, 42
-        1  => B"0001_001_0_00001010", -- LD  R1, 10
-        2  => B"1010_000_001_000000", -- SW  R0, (R1)  -> RAM[10] = 42
-        3  => B"0001_010_0_01100011", -- LD  R2, 99
-        4  => B"0001_011_0_00100011", -- LD  R3, 35
-        5  => B"1010_010_011_000000", -- SW  R2, (R3)  -> RAM[35] = 99
-        6  => B"0001_100_0_00010001", -- LD  R4, 17
-        7  => B"0001_101_0_00111100", -- LD  R5, 60
-        8  => B"1010_100_101_000000", -- SW  R4, (R5)  -> RAM[60] = 17
-        9  => B"0001_000_0_01100100", -- LD  R0, 100
-        10 => B"0001_001_0_01001001", -- LD  R1, 73
-        11 => B"1010_001_000_000000", -- SW  R1, (R0)  -> RAM[100] = 73
-        12 => B"0001_010_0_00000000", -- LD  R2, 0
-        13 => B"0001_100_0_00000000", -- LD  R4, 0
-        14 => B"0001_011_0_00001010", -- LD  R3, 10
-        15 => B"1001_101_011_000000", -- LW  R5, (R3)  -> R5 = 42
-        16 => B"0001_001_0_00111100", -- LD  R1, 60
-        17 => B"1001_000_001_000000", -- LW  R0, (R1)  -> R0 = 17
-        18 => B"0001_010_0_00100011", -- LD  R2, 35
-        19 => B"1001_100_010_000000", -- LW  R4, (R2)  -> R4 = 99
-        20 => B"0001_011_0_01100100", -- LD  R3, 100
-        21 => B"1001_001_011_000000", -- LW  R1, (R3)  -> R1 = 73
-        22 => B"0010_101_000_000000", -- ADD R5, R0    -> R5 = 59
-        23 => B"0100_100_001_000000", -- SUB R4, R1    -> R4 = 26
-        others => (others => '0')     -- NOP
+
+
+            constant memoria : mem_array := (
+
+        --CRIVO DE ERATOSTENES    
+
+        0  => B"0001_000_0_00000000",   -- LD R0, 0
+        1  => B"0001_001_0_00000001",   -- LD R1, 1
+        2  => B"0001_010_0_01011011",   -- LD R2, 91
+        3  => B"0001_011_0_00000010",   -- LD R3, 2
+        4  => B"0001_100_0_01111010",   -- LD R4, 122
+        5  => B"0001_101_0_00100000",   -- LD R5, 32
+
+        -- R0: Dado 0 para nao primo
+        -- R1: Dado 1 para candidato a primo
+        -- R2: Ponteiro RAM inicial = 89 + 2, ja q 2 é o primeiro primo
+        -- R3: Passo inicial = 2
+        -- R4: Limite RAM = 89 + 33 (AQUI EU POSSO AUMENTAR ATÉ QUAL NUMERO ELE VERIFICA SE É PRIMO OU NAO)
+        -- R5: Limite N = 32 (AQUI EU POSSO AUMENTAR ATÉ QUAL NUMERO ELE VERIFICA SE É PRIMO OU NAO TBM)
+
+
+        -- initializar:
+        6 => B"1010_001_010_000000", -- SW R1, (R2)
+        7  => B"0011_010_0_00000001",   -- ADDI R2, 1
+        8  => B"0101_101_010_000000",   -- MOV R5, R2
+        9  => B"0100_101_100_000000",   -- SUB R5, R4
+        10 => B"0111_000_0_00000110",   -- BNE 6
+
+        11 => B"0001_001_0_00000010",   -- LD R1, 2
+        12 => B"0001_011_0_00000110",   -- LD R3, 6 //aqui é 6 pq 6^2 > 32, então não precisa verificar mais que isso
+
+
+
+
+        -- looping:
+        13 => B"0101_010_001_000000",   -- MOV R2, R1
+        14 => B"0010_010_001_000000",   -- ADD R2, R1
+        15 => B"0011_010_0_01011001",   -- ADDI R2, 89
+
+
+        -- elim:
+        16 => B"1010_000_010_000000", -- SW R0, (R2)
+        17 => B"0010_010_001_000000",   -- ADD R2, R1
+        18 => B"0101_101_010_000000",   -- MOV R5, R2
+        19 => B"0100_101_100_000000",   -- SUB R5, R4
+        20 => B"1000_000_0_00010000",   -- BLO 16
+
+
+        --saiu do looping do primo atual:
+        21 => B"0011_001_0_00000001",   -- ADDI R1, 1
+        22 => B"0101_101_001_000000",   -- MOV R5, R1
+        23 => B"0100_101_011_000000",   -- SUB R5, R3
+        24 => B"1000_000_0_00001101",   -- BLO 13
+
+
+        others => (others => '0')
     );
-
 begin
     process(clk)
     begin

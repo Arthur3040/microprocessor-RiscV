@@ -1,0 +1,37 @@
+v 4
+file . "unidade_controle.vhd" "3d8c43e10a45b47b919c210de5606e5d430cb6f4" "20261125142805.797":
+  entity unidade_controle at 1( 0) + 0 on 81;
+  architecture a_unidade_controle of unidade_controle at 26( 758) + 0 on 82;
+file . "ULA.vhd" "339fc09390b1c058d4e562a8228ccaafdc19a9ae" "20261125142805.796":
+  entity ula at 1( 0) + 0 on 79;
+  architecture ss of ula at 17( 374) + 0 on 80;
+file . "rom.vhd" "5980dba618a3134bbaa699e275bab19a4d0dca9f" "20261125142805.796":
+  entity rom at 1( 0) + 0 on 77;
+  architecture a_rom of rom at 14( 273) + 0 on 78;
+file . "Reg.vhd" "51af6449e899746b5716d493cbb77a4230494a97" "20261125142805.796":
+  entity reg at 1( 0) + 0 on 75;
+  architecture reg of reg at 13( 296) + 0 on 76;
+file . "ram.vhd" "f496332526b3d646ede7a84d17744dea2ad7fe6a" "20261125142805.796":
+  entity ram at 1( 0) + 0 on 73;
+  architecture a_ram of ram at 15( 331) + 0 on 74;
+file . "processador.vhd" "7feff746f93b87156a97b73a443ed46c9470b9bf" "20261125142805.795":
+  entity processador at 1( 0) + 0 on 71;
+  architecture a_processador of processador at 26( 900) + 0 on 72;
+file . "processador_tb.vhd" "7b7f8f34ef33b759d2c14c76f6dae530583d0988" "20261125142805.795":
+  entity processador_tb at 1( 0) + 0 on 69;
+  architecture a_processador_tb of processador_tb at 8( 108) + 0 on 70;
+file . "pc.vhd" "772efe1ad5fd34305fe945ebc808090ebe85492a" "20261125142805.795":
+  entity pc at 1( 0) + 0 on 67;
+  architecture a_pc of pc at 18( 335) + 0 on 68;
+file . "mux_2x1.vhd" "9ad95620a2f2a4e7771dd6c49c6cfa043868ce6d" "20261125142805.795":
+  entity mux_2x1 at 1( 0) + 0 on 65;
+  architecture a_mux2_x1 of mux_2x1 at 14( 376) + 0 on 66;
+file . "maq_estados.vhd" "d3b3e5ce18f7337deede9db9068c6872c99ffb38" "20261125142805.794":
+  entity maq_estados at 1( 0) + 0 on 63;
+  architecture a_maq_estados of maq_estados at 12( 200) + 0 on 64;
+file . "extensor_sinal.vhd" "7b82a8cbecb0b1694151decba47dd7794fd5eb28" "20261125142805.794":
+  entity extensor_sinal at 1( 0) + 0 on 61;
+  architecture a_extensor_sinal of extensor_sinal at 12( 217) + 0 on 62;
+file . "banco_registradores.vhd" "088543fba09f0c124d44b79fcbb2342cab9c55fc" "20261125142805.794":
+  entity banco_registradores at 1( 0) + 0 on 59;
+  architecture br of banco_registradores at 25( 779) + 0 on 60;

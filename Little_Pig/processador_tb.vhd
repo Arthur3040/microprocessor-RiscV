@@ -80,7 +80,7 @@ begin
     sim_time_proc: process
     begin
         -- 24 instrucoes * 3 ciclos * 20 ns = 1440 ns (+ margem)
-        wait for 1800 ns;
+        wait for 50 us;
         finished <= '1';
         wait;
     end process;
