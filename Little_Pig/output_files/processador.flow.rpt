@@ -1,5 +1,5 @@
 Flow report for processador
-Wed Nov 11 17:55:35 2026
+Wed Nov 25 10:20:57 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 11 17:55:35 2026       ;
+; Flow Status                     ; Successful - Wed Nov 25 10:20:57 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; processador                                 ;
 ; Top-level Entity Name           ; processador                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 160 / 56,480 ( < 1 % )                      ;
-; Total registers                 ; 181                                         ;
-; Total pins                      ; 148 / 268 ( 55 % )                          ;
+; Logic utilization (in ALMs)     ; 1,222 / 56,480 ( 2 % )                      ;
+; Total registers                 ; 2241                                        ;
+; Total pins                      ; 188 / 268 ( 70 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/11/2026 17:51:24 ;
+; Start date & time ; 11/25/2026 10:18:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processador         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 2199023255808.179443028329308          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 185122840030571.179561272103962        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; processador_tb ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; processador_tb                         ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -104,26 +104,26 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 4914 MB             ; 00:00:47                           ;
-; Fitter               ; 00:03:12     ; 1.0                     ; 7930 MB             ; 00:16:57                           ;
-; Assembler            ; 00:00:14     ; 1.0                     ; 4836 MB             ; 00:00:13                           ;
-; Timing Analyzer      ; 00:00:16     ; 1.4                     ; 5355 MB             ; 00:00:19                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4751 MB             ; 00:00:04                           ;
-; Total                ; 00:04:08     ; --                      ; --                  ; 00:18:20                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 1006 MB             ; 00:00:26                           ;
+; Fitter               ; 00:01:36     ; 1.1                     ; 2556 MB             ; 00:02:32                           ;
+; Assembler            ; 00:00:08     ; 1.0                     ; 965 MB              ; 00:00:08                           ;
+; Timing Analyzer      ; 00:00:13     ; 1.8                     ; 1299 MB             ; 00:00:17                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1164 MB             ; 00:00:02                           ;
+; Total                ; 00:02:12     ; --                      ; --                  ; 00:03:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; PCdoGuido        ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; PCdoGuido        ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; PCdoGuido        ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; PCdoGuido        ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; PCdoGuido        ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                    ;
++----------------------+------------------+--------------------+--------------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name            ; OS Version         ; Processor type ;
++----------------------+------------------+--------------------+--------------------+----------------+
+; Analysis & Synthesis ; archymachine     ; \S{PRETTY_NAME} \r ; \S{PRETTY_NAME} \r ; x86_64         ;
+; Fitter               ; archymachine     ; \S{PRETTY_NAME} \r ; \S{PRETTY_NAME} \r ; x86_64         ;
+; Assembler            ; archymachine     ; \S{PRETTY_NAME} \r ; \S{PRETTY_NAME} \r ; x86_64         ;
+; Timing Analyzer      ; archymachine     ; \S{PRETTY_NAME} \r ; \S{PRETTY_NAME} \r ; x86_64         ;
+; EDA Netlist Writer   ; archymachine     ; \S{PRETTY_NAME} \r ; \S{PRETTY_NAME} \r ; x86_64         ;
++----------------------+------------------+--------------------+--------------------+----------------+
 
 
 ------------

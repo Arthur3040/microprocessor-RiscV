@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processador
-Wed Nov 11 17:51:44 2026
+Wed Nov 25 10:18:54 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,12 +13,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +43,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Nov 11 17:51:44 2026       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 25 10:18:54 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; processador                                 ;
 ; Top-level Entity Name           ; processador                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 130                                         ;
-; Total pins                      ; 148                                         ;
+; Total registers                 ; 2180                                        ;
+; Total pins                      ; 188                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -156,34 +155,37 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
-; unidade_controle.vhd             ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd    ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd                 ;         ;
-; rom.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/rom.vhd                 ;         ;
-; Reg.vhd                          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd                 ;         ;
-; processador.vhd                  ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd         ;         ;
-; pc.vhd                           ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/pc.vhd                  ;         ;
-; mux_2x1.vhd                      ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd             ;         ;
-; maq_estados.vhd                  ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd         ;         ;
-; extensor_sinal.vhd               ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd      ;         ;
-; banco_registradores.vhd          ; yes             ; User VHDL File  ; C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------+---------+
+; unidade_controle.vhd             ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/unidade_controle.vhd    ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/ULA.vhd                 ;         ;
+; rom.vhd                          ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/rom.vhd                 ;         ;
+; Reg.vhd                          ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/Reg.vhd                 ;         ;
+; processador.vhd                  ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd         ;         ;
+; pc.vhd                           ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/pc.vhd                  ;         ;
+; mux_2x1.vhd                      ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/mux_2x1.vhd             ;         ;
+; maq_estados.vhd                  ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/maq_estados.vhd         ;         ;
+; extensor_sinal.vhd               ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/extensor_sinal.vhd      ;         ;
+; banco_registradores.vhd          ; yes             ; User VHDL File        ; /home/agricma/microprocessor-RiscV/Little_Pig/banco_registradores.vhd ;         ;
+; ram.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/agricma/microprocessor-RiscV/Little_Pig/ram.vhd                 ;         ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -191,25 +193,25 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 162       ;
+; Estimate of Logic utilization (ALMs needed) ; 1756      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 251       ;
-;     -- 7 input functions                    ; 6         ;
-;     -- 6 input functions                    ; 58        ;
-;     -- 5 input functions                    ; 81        ;
-;     -- 4 input functions                    ; 24        ;
-;     -- <=3 input functions                  ; 82        ;
+; Combinational ALUT usage for logic          ; 1020      ;
+;     -- 7 input functions                    ; 521       ;
+;     -- 6 input functions                    ; 220       ;
+;     -- 5 input functions                    ; 55        ;
+;     -- 4 input functions                    ; 23        ;
+;     -- <=3 input functions                  ; 201       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 130       ;
+; Dedicated logic registers                   ; 2180      ;
 ;                                             ;           ;
-; I/O pins                                    ; 148       ;
+; I/O pins                                    ; 188       ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 130       ;
-; Total fan-out                               ; 1921      ;
-; Average fan-out                             ; 2.84      ;
+; Maximum fan-out                             ; 2180      ;
+; Total fan-out                               ; 12958     ;
+; Average fan-out                             ; 3.62      ;
 +---------------------------------------------+-----------+
 
 
@@ -218,33 +220,23 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name         ; Library Name ;
 +--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+---------------------+--------------+
-; |processador                         ; 251 (53)            ; 130 (0)                   ; 0                 ; 0          ; 148  ; 0            ; |processador                                          ; processador         ; work         ;
-;    |ULA:u_ula|                       ; 74 (74)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:u_ula                                ; ULA                 ; work         ;
-;    |banco_registradores:u_banco_reg| ; 41 (41)             ; 96 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |processador|banco_registradores:u_banco_reg          ; banco_registradores ; work         ;
+; |processador                         ; 1020 (69)           ; 2180 (0)                  ; 0                 ; 0          ; 188  ; 0            ; |processador                                          ; processador         ; work         ;
+;    |ULA:u_ula|                       ; 64 (64)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|ULA:u_ula                                ; ULA                 ; work         ;
+;    |banco_registradores:u_banco_reg| ; 56 (56)             ; 96 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |processador|banco_registradores:u_banco_reg          ; banco_registradores ; work         ;
 ;       |Reg:REG0|                     ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|banco_registradores:u_banco_reg|Reg:REG0 ; Reg                 ; work         ;
 ;       |Reg:REG1|                     ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|banco_registradores:u_banco_reg|Reg:REG1 ; Reg                 ; work         ;
 ;       |Reg:REG2|                     ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|banco_registradores:u_banco_reg|Reg:REG2 ; Reg                 ; work         ;
 ;       |Reg:REG3|                     ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|banco_registradores:u_banco_reg|Reg:REG3 ; Reg                 ; work         ;
 ;       |Reg:REG4|                     ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|banco_registradores:u_banco_reg|Reg:REG4 ; Reg                 ; work         ;
 ;       |Reg:REG5|                     ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|banco_registradores:u_banco_reg|Reg:REG5 ; Reg                 ; work         ;
-;    |mux_2x1:u_mux_ula_b|             ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|mux_2x1:u_mux_ula_b                      ; mux_2x1             ; work         ;
-;    |mux_2x1:u_mux_write|             ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|mux_2x1:u_mux_write                      ; mux_2x1             ; work         ;
+;    |mux_2x1:u_mux_ula_b|             ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|mux_2x1:u_mux_ula_b                      ; mux_2x1             ; work         ;
 ;    |pc:u_pc|                         ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|pc:u_pc                                  ; pc                  ; work         ;
-;    |rom:u_rom|                       ; 15 (15)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|rom:u_rom                                ; rom                 ; work         ;
-;    |unidade_controle:u_uc|           ; 10 (9)              ; 4 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|unidade_controle:u_uc                    ; unidade_controle    ; work         ;
+;    |ram:u_ram|                       ; 784 (784)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |processador|ram:u_ram                                ; ram                 ; work         ;
+;    |rom:u_rom|                       ; 17 (17)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processador|rom:u_rom                                ; rom                 ; work         ;
+;    |unidade_controle:u_uc|           ; 12 (11)             ; 4 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|unidade_controle:u_uc                    ; unidade_controle    ; work         ;
 ;       |maq_estados:u_maq|            ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |processador|unidade_controle:u_uc|maq_estados:u_maq  ; maq_estados         ; work         ;
 +--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                        ;
-+---------------------------------------+-----------------------------------+
-; Register name                         ; Reason for Removal                ;
-+---------------------------------------+-----------------------------------+
-; rom:u_rom|dado_out[5,6]               ; Merged with rom:u_rom|dado_out[4] ;
-; Total Number of Removed Registers = 2 ;                                   ;
-+---------------------------------------+-----------------------------------+
 
 
 +------------------------------------------------------+
@@ -252,27 +244,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 130   ;
+; Total registers                              ; 2180  ;
 ; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 116   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Clock Enable       ; 2178  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processador|pc:u_pc|s_pc_at[0]                          ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |processador|pc:u_pc|s_pc_at[15]                         ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 45 LEs               ; 0 LEs                  ; No         ; |processador|ULA:u_ula|flag_n                            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |processador|banco_registradores:u_banco_reg|data_r1[15] ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 80 LEs               ; 16 LEs                 ; No         ; |processador|mux_2x1:u_mux_ula_b|data_out[1]             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processador|pc:u_pc|s_pc_at[0]                         ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |processador|pc:u_pc|s_pc_at[15]                        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |processador|s_write_back[7]                            ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |processador|banco_registradores:u_banco_reg|data_r2[2] ;
+; 5:1                ; 15 bits   ; 45 LEs        ; 45 LEs               ; 0 LEs                  ; No         ; |processador|ULA:u_ula|saida[9]                         ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |processador|banco_registradores:u_banco_reg|data_r1[1] ;
+; 9:1                ; 9 bits    ; 54 LEs        ; 45 LEs               ; 9 LEs                  ; No         ; |processador|mux_2x1:u_mux_ula_b|data_out[15]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -280,29 +274,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 130                         ;
+; arriav_ff             ; 2180                        ;
 ;     CLR               ; 2                           ;
-;     ENA               ; 14                          ;
+;     ENA               ; 2064                        ;
 ;     ENA CLR           ; 106                         ;
 ;     ENA CLR SCLR      ; 8                           ;
-; arriav_lcell_comb     ; 251                         ;
+; arriav_lcell_comb     ; 1020                        ;
 ;     arith             ; 67                          ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 16                          ;
-;         2 data inputs ; 40                          ;
-;         4 data inputs ; 8                           ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 178                         ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 19                          ;
-;         4 data inputs ; 16                          ;
-;         5 data inputs ; 81                          ;
-;         6 data inputs ; 58                          ;
-; boundary_port         ; 148                         ;
+;         2 data inputs ; 34                          ;
+;         4 data inputs ; 14                          ;
+;     extend            ; 521                         ;
+;         7 data inputs ; 521                         ;
+;     normal            ; 432                         ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 145                         ;
+;         4 data inputs ; 9                           ;
+;         5 data inputs ; 55                          ;
+;         6 data inputs ; 220                         ;
+; boundary_port         ; 188                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.10                        ;
-; Average LUT depth     ; 5.91                        ;
+; Max LUT depth         ; 8.20                        ;
+; Average LUT depth     ; 5.10                        ;
 +-----------------------+-----------------------------+
 
 
@@ -311,7 +305,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -321,64 +315,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 11 17:51:22 2026
+    Info: Processing started: Wed Nov 25 10:18:40 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadora_programavel -c processador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file processador_tb.vhd
-    Info (12022): Found design unit 1: processador_tb-a_processador_tb File: C:/intelFPGA_lite/18.1/Little_Pig/processador_tb.vhd Line: 8
-    Info (12023): Found entity 1: processador_tb File: C:/intelFPGA_lite/18.1/Little_Pig/processador_tb.vhd Line: 5
+    Info (12022): Found design unit 1: processador_tb-a_processador_tb File: /home/agricma/microprocessor-RiscV/Little_Pig/processador_tb.vhd Line: 8
+    Info (12023): Found entity 1: processador_tb File: /home/agricma/microprocessor-RiscV/Little_Pig/processador_tb.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
-    Info (12022): Found design unit 1: unidade_controle-a_unidade_controle File: C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd Line: 25
-    Info (12023): Found entity 1: unidade_controle File: C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-ss File: C:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd Line: 17
-    Info (12023): Found entity 1: ULA File: C:/intelFPGA_lite/18.1/Little_Pig/ULA.vhd Line: 5
+    Info (12022): Found design unit 1: unidade_controle-a_unidade_controle File: /home/agricma/microprocessor-RiscV/Little_Pig/unidade_controle.vhd Line: 26
+    Info (12023): Found entity 1: unidade_controle File: /home/agricma/microprocessor-RiscV/Little_Pig/unidade_controle.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
+    Info (12022): Found design unit 1: ULA-ss File: /home/agricma/microprocessor-RiscV/Little_Pig/ULA.vhd Line: 17
+    Info (12023): Found entity 1: ULA File: /home/agricma/microprocessor-RiscV/Little_Pig/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: rom-a_rom File: C:/intelFPGA_lite/18.1/Little_Pig/rom.vhd Line: 14
-    Info (12023): Found entity 1: rom File: C:/intelFPGA_lite/18.1/Little_Pig/rom.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file reg.vhd
-    Info (12022): Found design unit 1: Reg-Reg File: C:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd Line: 13
-    Info (12023): Found entity 1: Reg File: C:/intelFPGA_lite/18.1/Little_Pig/Reg.vhd Line: 4
+    Info (12022): Found design unit 1: rom-a_rom File: /home/agricma/microprocessor-RiscV/Little_Pig/rom.vhd Line: 14
+    Info (12023): Found entity 1: rom File: /home/agricma/microprocessor-RiscV/Little_Pig/rom.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Reg.vhd
+    Info (12022): Found design unit 1: Reg-Reg File: /home/agricma/microprocessor-RiscV/Little_Pig/Reg.vhd Line: 13
+    Info (12023): Found entity 1: Reg File: /home/agricma/microprocessor-RiscV/Little_Pig/Reg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: processador-a_processador File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 22
-    Info (12023): Found entity 1: processador File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 5
+    Info (12022): Found design unit 1: processador-a_processador File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 26
+    Info (12023): Found entity 1: processador File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
-    Info (12022): Found design unit 1: pc-a_pc File: C:/intelFPGA_lite/18.1/Little_Pig/pc.vhd Line: 18
-    Info (12023): Found entity 1: pc File: C:/intelFPGA_lite/18.1/Little_Pig/pc.vhd Line: 5
+    Info (12022): Found design unit 1: pc-a_pc File: /home/agricma/microprocessor-RiscV/Little_Pig/pc.vhd Line: 18
+    Info (12023): Found entity 1: pc File: /home/agricma/microprocessor-RiscV/Little_Pig/pc.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mux_2x1.vhd
-    Info (12022): Found design unit 1: mux_2x1-a_mux2_x1 File: C:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd Line: 14
-    Info (12023): Found entity 1: mux_2x1 File: C:/intelFPGA_lite/18.1/Little_Pig/mux_2x1.vhd Line: 5
+    Info (12022): Found design unit 1: mux_2x1-a_mux2_x1 File: /home/agricma/microprocessor-RiscV/Little_Pig/mux_2x1.vhd Line: 14
+    Info (12023): Found entity 1: mux_2x1 File: /home/agricma/microprocessor-RiscV/Little_Pig/mux_2x1.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file maq_estados.vhd
-    Info (12022): Found design unit 1: maq_estados-a_maq_estados File: C:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd Line: 12
-    Info (12023): Found entity 1: maq_estados File: C:/intelFPGA_lite/18.1/Little_Pig/maq_estados.vhd Line: 5
+    Info (12022): Found design unit 1: maq_estados-a_maq_estados File: /home/agricma/microprocessor-RiscV/Little_Pig/maq_estados.vhd Line: 12
+    Info (12023): Found entity 1: maq_estados File: /home/agricma/microprocessor-RiscV/Little_Pig/maq_estados.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file extensor_sinal.vhd
-    Info (12022): Found design unit 1: extensor_sinal-a_extensor_sinal File: C:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd Line: 12
-    Info (12023): Found entity 1: extensor_sinal File: C:/intelFPGA_lite/18.1/Little_Pig/extensor_sinal.vhd Line: 5
+    Info (12022): Found design unit 1: extensor_sinal-a_extensor_sinal File: /home/agricma/microprocessor-RiscV/Little_Pig/extensor_sinal.vhd Line: 12
+    Info (12023): Found entity 1: extensor_sinal File: /home/agricma/microprocessor-RiscV/Little_Pig/extensor_sinal.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file banco_registradores.vhd
-    Info (12022): Found design unit 1: banco_registradores-BR File: C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd Line: 25
-    Info (12023): Found entity 1: banco_registradores File: C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd Line: 5
+    Info (12022): Found design unit 1: banco_registradores-BR File: /home/agricma/microprocessor-RiscV/Little_Pig/banco_registradores.vhd Line: 25
+    Info (12023): Found entity 1: banco_registradores File: /home/agricma/microprocessor-RiscV/Little_Pig/banco_registradores.vhd Line: 5
 Info (12127): Elaborating entity "processador" for the top level hierarchy
-Info (12128): Elaborating entity "pc" for hierarchy "pc:u_pc" File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 157
-Info (12128): Elaborating entity "rom" for hierarchy "rom:u_rom" File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 165
-Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:u_uc" File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 172
-Info (12128): Elaborating entity "maq_estados" for hierarchy "unidade_controle:u_uc|maq_estados:u_maq" File: C:/intelFPGA_lite/18.1/Little_Pig/unidade_controle.vhd Line: 58
-Info (12128): Elaborating entity "extensor_sinal" for hierarchy "extensor_sinal:u_extensor" File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 190
-Info (12128): Elaborating entity "mux_2x1" for hierarchy "mux_2x1:u_mux_write" File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 195
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:u_ula" File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 209
-Info (12128): Elaborating entity "banco_registradores" for hierarchy "banco_registradores:u_banco_reg" File: C:/intelFPGA_lite/18.1/Little_Pig/processador.vhd Line: 220
-Info (12128): Elaborating entity "Reg" for hierarchy "banco_registradores:u_banco_reg|Reg:REG0" File: C:/intelFPGA_lite/18.1/Little_Pig/banco_registradores.vhd Line: 49
+Info (12128): Elaborating entity "pc" for hierarchy "pc:u_pc" File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 178
+Info (12128): Elaborating entity "rom" for hierarchy "rom:u_rom" File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 186
+Warning (12125): Using design file ram.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: ram-a_ram File: /home/agricma/microprocessor-RiscV/Little_Pig/ram.vhd Line: 15
+    Info (12023): Found entity 1: ram File: /home/agricma/microprocessor-RiscV/Little_Pig/ram.vhd Line: 5
+Info (12128): Elaborating entity "ram" for hierarchy "ram:u_ram" File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 193
+Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:u_uc" File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 201
+Info (12128): Elaborating entity "maq_estados" for hierarchy "unidade_controle:u_uc|maq_estados:u_maq" File: /home/agricma/microprocessor-RiscV/Little_Pig/unidade_controle.vhd Line: 59
+Info (12128): Elaborating entity "extensor_sinal" for hierarchy "extensor_sinal:u_extensor" File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 220
+Info (12128): Elaborating entity "mux_2x1" for hierarchy "mux_2x1:u_mux_ula_b" File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 225
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:u_ula" File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 232
+Info (12128): Elaborating entity "banco_registradores" for hierarchy "banco_registradores:u_banco_reg" File: /home/agricma/microprocessor-RiscV/Little_Pig/processador.vhd Line: 243
+Info (12128): Elaborating entity "Reg" for hierarchy "banco_registradores:u_banco_reg|Reg:REG0" File: /home/agricma/microprocessor-RiscV/Little_Pig/banco_registradores.vhd Line: 49
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "ram:u_ram|conteudo_ram" is uninferred due to asynchronous read logic File: /home/agricma/microprocessor-RiscV/Little_Pig/ram.vhd Line: 17
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 496 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3354 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 146 output pins
-    Info (21061): Implemented 348 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4914 megabytes
-    Info: Processing ended: Wed Nov 11 17:51:44 2026
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:47
+    Info (21059): Implemented 186 output pins
+    Info (21061): Implemented 3166 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 1049 megabytes
+    Info: Processing ended: Wed Nov 25 10:18:54 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 
